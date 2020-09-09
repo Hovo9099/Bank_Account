@@ -1,0 +1,106 @@
+import java.util.Scanner;	
+import java.lang.Math;	
+//160 	
+class Main { 	
+public static void main(String[] args) { 	
+Scanner sc =new Scanner(System.in); int n;	
+
+for(int i=100;i<1000;i++){	
+  n=(int)Math.sqrt(i*16);	
+
+    if(Math.pow(n,2)==i*16)	
+       System.out.println(i);  	
+
+
+    }  	
+  } 	
+}	
+import java.util.Scanner;	
+//tivy berel artadrichneri --error ka	
+
+class Main {	
+  public static void main(String[] args) {	
+    Scanner sc=new Scanner(System.in);	
+
+    int n=sc.nextInt();//10	
+
+    int num=2;	
+
+    while (n!=1){	
+      if (n%num==0){	
+        System.out.print(Convert.toString(num), "*");	
+        n/=num;	
+      }	
+      else{	
+        num+=1;	
+      }	
+
+    }	
+
+  }	
+}	
+
+import java.util.Scanner;	
+//181	
+class Main {	
+  public static void main(String[] args) {	
+    Scanner sc=new Scanner(System.in);	
+
+    int n=sc.nextInt();//10	
+    int count=0,sum;	
+    while (n!=1){	
+      if(n%2==0){	
+        n/=2;	
+      count++;	
+      }	
+    }	
+    System.out.println(count);	
+
+  }	
+
+}	
+
+package com.company;	
+import java.util.Scanner;	
+//182	
+public class Homework {	
+
+	public static void main(String[] args) {	
+		Scanner sc=new Scanner(System.in);	
+		int n=sc.nextInt();	
+		int max=0;	
+		for(int i=1;i<n;i++){	
+
+			if(n>i*i){	
+				max=i;	
+
+			}	
+		}	
+		System.out.println(max);	
+	}	
+}	
+
+package com.company;	
+import java.util.Scanner;	
+//dzaynavorneri hashvum bari mej	
+public class Source {	
+
+	public static void main(String[] args) {	
+		Scanner sc=new Scanner(System.in);	
+		String n=sc.next();	
+		int count = 0;	
+        for (int i = 0; i < n.length(); i++)	
+        {	
+            if (n.charAt(i) == 'a' || n.charAt(i) == 'e' || n.charAt(i) == 'i'	
+                    || n.charAt(i) == 'o' || n.charAt(i) == 'u' || n.charAt(i)=='y'){	
+                count++;	
+            }	
+            else if(n.charAt(i)=='A'||n.charAt(i) == 'I'	
+                || n.charAt(i) == 'O' || n.charAt(i) == 'U' || n.charAt(i)=='Y'|| n.charAt(i)=='E'){	
+            	count++;	
+            }	
+		}	
+        System.out.println(count);	
+	}	
+
+}	
