@@ -104,3 +104,36 @@ public class Source {
 	}	
 
 }	
+
+import java.util.Scanner;
+//184
+class Main {
+  public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int k=0;
+    for(int i=1;i<n;i++){
+    if (n>Math.pow(3,i)){
+     k=i;
+      }
+     }
+     System.out.println(k);
+  }
+}
+
+import java.util.Scanner;
+//183
+class Main {
+  public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int k=0;
+    for(int i=1;i<n;i++){
+    if (n<Math.pow(3,i)){
+     k=i;
+     break;
+      }
+     }
+     System.out.println(k);
+  }
+}
