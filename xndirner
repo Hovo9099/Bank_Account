@@ -59,3 +59,48 @@ class Main {
   }
 
 }
+
+package com.company;
+import java.util.Scanner;
+//182
+public class Homework {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int max=0;
+		for(int i=1;i<n;i++){
+		
+			if(n>i*i){
+				max=i;
+				
+			}
+		}
+		System.out.println(max);
+	}
+}
+
+package com.company;
+import java.util.Scanner;
+//dzaynavorneri hashvum bari mej
+public class Source {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String n=sc.next();
+		int count = 0;
+        for (int i = 0; i < n.length(); i++)
+        {
+            if (n.charAt(i) == 'a' || n.charAt(i) == 'e' || n.charAt(i) == 'i'
+                    || n.charAt(i) == 'o' || n.charAt(i) == 'u' || n.charAt(i)=='y'){
+                count++;
+            }
+            else if(n.charAt(i)=='A'||n.charAt(i) == 'I'
+                || n.charAt(i) == 'O' || n.charAt(i) == 'U' || n.charAt(i)=='Y'|| n.charAt(i)=='E'){
+            	count++;
+            }
+		}
+        System.out.println(count);
+	}
+
+}
