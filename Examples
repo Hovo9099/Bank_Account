@@ -155,3 +155,22 @@ class Main {
 
   }
 }
+
+import java.util.Scanner;
+class Main {
+  //182 funkciaov
+  public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    System.out.print(hashvark(n));
+  }
+  static int hashvark(int n){
+   int max=0;
+    for(int i=1;i<n;i++){
+        if(n>i*i)
+        max=i;
+    }
+    return max;
+
+  }
+}
