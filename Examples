@@ -137,3 +137,21 @@ class Main {
      System.out.println(k);
   }
 }
+
+import java.util.Scanner;
+class Main {
+  //171
+  public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    System.out.println(hashvark(n));
+  }
+  static int hashvark(int n){
+   int count=1;
+    for(int i=2;i<=n;i++){
+        count*=i;
+    }
+    return count;
+
+  }
+}
