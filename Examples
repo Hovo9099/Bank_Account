@@ -15,30 +15,33 @@ for(int i=100;i<1000;i++){
     }  	
   } 	
 }	
+
 import java.util.Scanner;	
-//tivy berel artadrichneri --error ka	
+//tivy berel artadrichneri 
 
-class Main {	
-  public static void main(String[] args) {	
-    Scanner sc=new Scanner(System.in);	
+class Homework {	
+public static void main(String[] args) {	
+  Scanner sc=new Scanner(System.in);	
 
-    int n=sc.nextInt();//10	
+  int n=sc.nextInt();//10	
 
-    int num=2;	
+  int num=2;	
 
-    while (n!=1){	
-      if (n%num==0){	
-        System.out.print(Convert.toString(num), "*");	
-        n/=num;	
-      }	
-      else{	
-        num+=1;	
-      }	
-
+  while (n!=1){	
+    if (n%num==0){	
+    	String s=String.valueOf(num);
+      System.out.print((s)+ "*");	
+      n/=num;	
     }	
+    	else{	
+      num+=1;	
+    		}	
 
-  }	
+  		}	
+
+	}	
 }	
+	
 
 import java.util.Scanner;	
 //181	
