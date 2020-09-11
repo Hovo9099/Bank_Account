@@ -177,3 +177,23 @@ class Main {
 
   }
 }
+
+
+import java.util.Scanner;
+//185
+class Main { 
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int p=sc.nextInt();
+    System.out.print(hashvark(p));
+    }
+
+    static int hashvark(int p){
+        int avand=30000,amis=0;
+        while (avand<100000){
+        avand+=(avand*p)/100;
+        amis++;
+        }
+        return(amis);
+    } 
+}
