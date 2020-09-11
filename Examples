@@ -218,3 +218,23 @@ public static void main(String[] args) {
         return true;  
     }  
  }
+ 
+ 
+import java.util.Scanner;
+class Main{
+//203
+public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+            int n=sc.nextInt();
+        System.out.print(hashvark(n));
+    }  
+    static int hashvark(int n){
+        int a=0, sum=1;
+        while(n!=0){
+            a=n%10;
+            n/=10;
+            sum*=a;
+        }
+        return sum;
+    }
+ }
