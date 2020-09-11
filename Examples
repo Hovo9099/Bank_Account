@@ -238,3 +238,24 @@ public static void main(String[] args) {
         return sum;
     }
  }
+ 
+ 
+import java.util.Scanner;
+class Main{
+//209
+public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+            int n=sc.nextInt();
+        System.out.print(hashvark(n));
+    }  
+    static boolean hashvark(int n){
+        int a=0;
+        while(n!=0){
+            a=n%10;
+            n/=10;
+            if(a%2!=0)
+            return true;
+        }
+        return false;
+    }
+ }
