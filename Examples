@@ -353,4 +353,49 @@ public static void main(String[] args) {
     
     }
 }
+
+
+
+import java.util.Scanner;
+
+class Main{
+//hashvel te qani hat nuyn tvic ka masivi mej
+public static void main(String[] args) 
+{
+        int [] arr=new int[7];     
+        nermucel(arr);
+       hashvark(arr);
+          
+    }
+    static void nermucel(int []arr)
+    {
+        Scanner sc=new Scanner(System.in);
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+    }
+    
+    static void hashvark(int []arr)
+    {
+        int copy=arr[0],count=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(copy!=arr[i])
+            { 
+                System.out.println(count + " times " +copy);
+                count=1;
+                copy=arr[i];
+            }
+            else 
+            {
+                count++;
+             }
+            
+        } 
+        System.out.println(count + " times " +copy);
+    }
+}
+        
+    
      
