@@ -279,3 +279,21 @@ public static void main(String[] args) {
         return false;
     }
  }
+
+import java.util.Scanner;
+class Main{
+//204
+public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);//765
+        String a=sc.next(); 
+        System.out.print(reverse_sc(a));
+    }
+    static String reverse_sc(String n){
+        String s="";
+        for(int i=n.length()-1;i>=0;i--){
+                s+=n.charAt(i);
+             
+        }  
+         return s;
+    }
+}
