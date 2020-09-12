@@ -297,3 +297,29 @@ public static void main(String[] args) {
          return s;
     }
 }
+
+
+import java.util.Scanner;
+class Main{
+//210
+public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);//765
+      int a=sc.nextInt(); 
+        System.out.print(reverse_sc(a));
+    }
+    static int reverse_sc(int n){
+        int sum=0,count=0,a;
+        while(n!=0){
+            a=n%10;
+            n/=10;
+            if(a%2==0)
+                sum+=a;
+                else
+                count+=a;
+           } 
+           if(sum==count)
+            return 1;
+        return 0;
+        }
+    }
+
