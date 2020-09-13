@@ -511,3 +511,49 @@ class Main {
             return sum/count;
      }
 }  
+import java.util.Scanner;
+
+import java.util.Arrays;
+
+class Main {
+   //248
+    public static void main(String[] args)
+     {
+        Scanner sc =new Scanner(System.in);
+         int n=sc.nextInt();
+        int []arr= new int[n];
+        nermucel(arr);
+        System.out.print("patasxan " +hashvark(arr));
+     }
+
+
+     static void nermucel(int [] ggg)
+     {
+         Scanner cs=new Scanner(System.in);
+         for(int i=0;i<ggg.length;i++)
+         {
+            ggg[i]=cs.nextInt() ;   
+         } 
+     }
+
+     static int hashvark(int []arr)
+     {
+        Scanner cs=new Scanner(System.in);
+        System.out.println("grir k i arjeqy");
+        int k=cs.nextInt();
+         int sum=0; 
+         
+        for(int i=0;i<arr.length;i++)
+        {
+         
+           
+            if(Math.pow((i+arr[i]),2)%k==0)
+            {
+                 sum+=arr[i];
+            }
+
+         }
+            return sum;
+
+     }
+}  
