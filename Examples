@@ -557,3 +557,38 @@ class Main {
 
      }
 }  
+
+import java.util.Scanner;
+
+import java.util.Arrays;
+
+class Main {
+   //251
+    public static void main(String[] args)
+     {
+        Scanner sc =new Scanner(System.in);
+         int n=sc.nextInt();
+         int [] arr=new int [n];
+         arrayPrint(arr);
+         System.out.println("patasxan " + hashvark(arr));
+
+     }
+     static void arrayPrint(int [] hh)
+     {
+      Scanner sc =new Scanner(System.in);
+        for (int i=0;i<hh.length;i++)
+        {
+            hh[i]=sc.nextInt();
+        } 
+      }
+        static int hashvark(int [] number)
+        {
+            int max=0;
+            for(int i=0;i<number.length;i++)
+            {
+                  if(max<number[i])
+                  max=number[i];
+            }
+            return max;
+        }
+}  
