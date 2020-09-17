@@ -338,6 +338,10 @@ public static void main(String[] args) {
         for(int i=0;i<arr.length;i++){
             arr[i]=sc.nextInt();
         }
+	for(int i=0;i<arr.length;i++)
+         {
+           System.out.print(arr[i]) ;   
+         }
     }
     
     static int hashvark(int []arr){
@@ -374,6 +378,10 @@ public static void main(String[] args)
         {
             arr[i]=sc.nextInt();
         }
+	for(int i=0;i<arr.length;i++)
+         {
+           System.out.print(arr[i]) ;   
+         }
     }
     
     static void hashvark(int []arr)
@@ -418,6 +426,10 @@ class Main {
         {
            arr[i]=sc.nextInt();
         }
+	for(int i=0;i<arr.length;i++)
+         {
+           System.out.print(arr[i]) ;   
+         }
     }
     static int hashvark(int[] dgg)
     {
@@ -454,6 +466,10 @@ class Main {
          {
             ggg[i]=cs.nextInt() ;   
          } 
+	 for(int i=0;i<ggg.length;i++)
+         {
+           System.out.print(ggg[i]) ;   
+         }
      }
 
      static int hashvark(int []arr)
@@ -493,7 +509,11 @@ class Main {
          for(int i=0;i<ggg.length;i++)
          {
             ggg[i]=cs.nextInt() ;   
-         } 
+         }
+	 for(int i=0;i<ggg.length;i++)
+         {
+           System.out.print(ggg[i]) ;   
+         }
      }
 
      static int hashvark(int []arr)
@@ -534,6 +554,10 @@ class Main {
          {
             ggg[i]=cs.nextInt() ;   
          } 
+	 for(int i=0;i<ggg.length;i++)
+         {
+           System.out.print(ggg[i]) ;   
+         }
      }
 
      static int hashvark(int []arr)
@@ -580,6 +604,10 @@ class Main {
         {
             hh[i]=sc.nextInt();
         } 
+	 for (int i=0;i<hh.length;i++)
+        {
+            System.out.print(hh[i]);
+        } 
       }
         static int hashvark(int [] number)
         {
@@ -592,3 +620,46 @@ class Main {
             return max;
         }
 }  
+
+import java.util.Scanner;
+
+class Main {
+   //253
+    public static void main(String[] args)
+     {
+        Scanner sc =new Scanner(System.in);
+         int [] arr=new int [sc.nextInt()];
+         arrayPrint(arr);
+         System.out.println("\n" +"patasxan " + hashvark(arr));
+
+     }
+     static void arrayPrint(int [] hh)
+     {
+      Scanner sc =new Scanner(System.in);
+        for (int i=0;i<hh.length;i++)
+        {
+            hh[i]=sc.nextInt();
+        } 
+        for(int i=0;i<hh.length;i++)
+        {
+          System.out.print("\n" +hh[i]);
+        }
+      }
+        static int hashvark(int [] number)
+        {
+            int max=number[0],min=number[0];
+            for(int i=0;i<number.length;i++)
+            {
+                  if(max<number[i])
+                  max=number[i];
+                if(min>number[i])
+                    min=number[i];            
+            }
+            return max+min;
+        }
+}  
+        
+
+
+     
+
