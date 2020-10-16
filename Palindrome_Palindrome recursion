@@ -1,0 +1,42 @@
+import java.util.Scanner;
+//palindrome
+
+public class Source
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner (System.in);
+        String x=sc.next();
+        System.out.print(palindrome(x));
+    }
+    static String palindrome(String x)
+    {
+        for(int i=0;i<x.length();i++)
+             if(x.charAt(i)!=x.charAt(x.length()-i-1))
+                return "is not palindrome";
+        return "is palindrome";
+    }
+}
+
+import java.util.Scanner;
+//palindrome recursion
+
+public class Source
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner (System.in);
+        String path=sc.next();
+        System.out.println(palindromRec(path, 0, path.length()-1));
+    }
+    static boolean palindromRec(String path,int start,int end)
+    {
+        if(start==end)
+            return true;
+        if(path.charAt(start)!=path.charAt(end))
+            return false;
+        if(start<end+1)
+            return palindromRec(path, start+1, end-1);
+        return true;
+    }
+}
