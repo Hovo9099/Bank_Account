@@ -811,5 +811,34 @@ public class FirstHomework
             return sum/count;
         return 0;
     }
-}     
+}  
+
+//276
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        int n = sc.nextInt();
+        char [] arr = new char[n];
+        ArrayInputAndPrint(arr);
+        System.out.println(CountOfr(arr));
+    }
+
+    static void ArrayInputAndPrint(char []arr) {
+        Scanner sc =new Scanner(System.in);
+        for (int i=0;i<arr.length;i++)
+           arr[i]=sc.next().charAt(0);
+        for (int i=0;i<arr.length;i++)
+            System.out.println(arr[i]);
+    }
+
+    static boolean CountOfr(char []array) {
+        int count = 0;
+        for (int i=0;i<array.length;i++)
+            if (array[i] == 'r') {
+                count++;
+            }
+        if (count>0)
+            return true;
+        return false;
+    }
+}
 
