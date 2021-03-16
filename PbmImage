@@ -1,0 +1,62 @@
+import java.io.FileOutputStream;
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) throws Exception {
+		Scanner sc = new Scanner(System.in);
+		String format = "P1";
+		int x,y,length;
+		int width = 100;
+		int height = 100;
+		char[][] imgData = new char [width][height];
+		backGround(width, height, imgData);
+		System.out.println("Input x cordinate");
+		x = sc.nextInt();
+		System.out.println("Input y cordinate");
+		y = sc.nextInt();
+		System.out.println("Input length square");
+		length = sc.nextInt();
+		isTrue(x, y, length, imgData);
+		export(format, width, height, imgData);
+	}
+	
+	private static void backGround(int width, int height, char[][] imgData) {
+		for (int i = 0; i < width; i++) {
+			for(int j=0;j<height;j++) {
+				imgData[i][j] = '0';
+			}
+		}
+	}
+
+	private static void isTrue(int x,int y,int length, char[][] imgData) throws Exception{
+		if(x>=0 && x <= 100 && y >= 0 && y <= 100 && length >=0 && length <= 100 ){
+				for (int i = x; i < x+length; i++) {
+					for(int j = y;j < y+length;j++) {
+						imgData[i][j] = '1';
+					}
+				}
+			}
+		if(x + length > 100 || y + length > 100)
+			throw new Exception("parameters is false");
+		}
+		
+	private static void export(String format, int width, int height, char[][] data) throws Exception {
+		String fileName = "Image.pbm";
+		FileOutputStream file = new FileOutputStream(fileName);
+		writeString(file, format);
+		file.write('\n');
+		writeString(file, width + " " + height);
+		file.write('\n');
+		for(char[] row : data) {
+			for(char cell : row) {
+				writeString(file, String.valueOf(cell));
+			}
+			file.write('\n');
+		}
+	}
+	private static void writeString(FileOutputStream file, String value) throws Exception {
+		for(char c : value.toCharArray()) {
+			file.write(c);
+		}
+	}
+}
